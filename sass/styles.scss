@@ -1,0 +1,27 @@
+$linkColors: black;
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+  color: $linkColors;
+}
+a:hover {
+  text-decoration: none;
+  color: $linkColors;
+}
+a:focus {
+  text-decoration: none;
+  color: $linkColors;
+}
+a:hover,
+a:active {
+  text-decoration: none;
+  color: $linkColors;
+}
