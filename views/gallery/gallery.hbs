@@ -1,5 +1,24 @@
-<h2 id="picturesHeader">Pictures under here</h2>
+{{#if loginStatus}}
+<div id="userID">You are logged in as {{sessionUser}}</div><span id="logout"><button class="button"><a href="/logout">Logout</a></button></span>
+{{else}}
+<span id="login"><button class="button"><a href="/login">Login</a></button></span><span id="register"><button class="button"><a
+            href="/register">Register</a></button></span>
+{{/if}}
+<h2 id="picturesHeader"> Main gallery </h2>
+<div id="newPic"><button class="button"><a href="gallery/new">Add new picture</a></button></div>
 <div id="pictureBody">
-    <div id="recentPic">Most recent pic here</div>
-    <div id="otherPics">other pics here</div>
+    <div id="recentPic"></div>
+    <div id="otherPicsBody">
+        {{#each results}}
+        <div id="otherPics">
+            <div class="img"><a href="/gallery/{{id}}"><img src="{{url}}"></a>
+            </div>
+            <div id="imgDescription">
+                <p class="user"><a href="/user/{{user.id}}">{{user.username}}</a></p>
+                <p class="description">{{#if description}}Description: {{description}}{{/if}}</p>
+                <p class="created">Uploaded at:{{created_at}}</p>
+            </div>
+        </div>
+        {{/each}}
+    </div>
 </div>

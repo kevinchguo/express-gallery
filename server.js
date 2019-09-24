@@ -132,7 +132,7 @@ app.post("/register", (req, res) => {
 
 app.get("/logout", (req, res) => {
   req.logout();
-  res.send("logged out");
+  res.redirect("/gallery");
 });
 
 app.get("/", (req, res) => {

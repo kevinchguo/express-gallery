@@ -1,2 +1,12 @@
-<h2> one pic here</h2>
-<div id="pictureBody"></div>
+<h2> <img src="{{results.url}}" alt="kitten"></h2>
+{{#if loginStatus}}
+<div id="editBtn"><button><a href="/gallery/{{results.id}}/edit">edit</a></button></div>
+<div id="editBtn"><button><a href="/gallery/{{results.id}}/delete">delete</a></button></div>
+{{/if}}
+<div id="imgDescription">
+    <p id="user">User: <a href="/user/{{results.user.id}}">{{results.user.username}}</a></p>
+    <p id="description">Description: {{results.description}}</p>
+    <p id="url">URL: {{results.url}}</p>
+    <p id="created">Uploaded: {{results.created_at}}</p>
+</div>
+<div id="backBtn"><button><a href="/gallery">Back</a></button></div>

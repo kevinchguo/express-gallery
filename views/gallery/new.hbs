@@ -1,14 +1,17 @@
 <h2>Some header here</h2>
 <div id="pictureBody">
-    <form action="/gallery" method="POST">
-        <input type="text" name="author" />
+    <form method="post">
+        <label for="url">URL:</label>
         <br />
         <input type="text" name="url" />
         <br />
+        <label for="description">Description:</label>
+        <br />
         <input type="text" name="description" />
         <br />
-        <button>
+        <button type="submit" id="submitBtn">
             Post pic
         </button>
     </form>
+    <div id="backBtn"><button><a href="/gallery">Back</a></button></div>
 </div>

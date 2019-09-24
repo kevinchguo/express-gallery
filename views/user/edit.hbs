@@ -1,0 +1,14 @@
+<h1 id="edit">Edit</h1>
+<h2 id="username">{{results.username}}</h2>
+<div id="editForm">
+    <form action="/gallery/{{results.id}}?_method=PUT" method="POST">
+        <input type="text" name="url" />
+        <br />
+        <input type="text" name="description" />
+        <br />
+        <button type="submit">
+            Confirm
+        </button>
+    </form>
+</div>
+<div id="backBtn"><button><a href="/gallery">Back</a></button></div>

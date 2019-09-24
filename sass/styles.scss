@@ -1,7 +1,12 @@
 $linkColors: black;
+$outerMargins: 20px;
+$buttonMargins: 20px;
 
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Reenie Beanie", cursive;
+  margin: 0;
+  background-image: url("../assets/cork-board.png");
+  font-size: 1em;
 }
 
 a {
@@ -24,4 +29,101 @@ a:hover,
 a:active {
   text-decoration: none;
   color: $linkColors;
+}
+
+#otherPics {
+  box-shadow: 20px 20px 20px 5px;
+  margin: 10px;
+}
+
+#fpHeader {
+  text-align: center;
+  font-family: "Waiting for the Sunrise", cursive;
+  font-size: 48pt;
+}
+#picturesHeader {
+  text-align: center;
+  font-family: "Waiting for the Sunrise", cursive;
+  font-size: 24pt;
+  text-decoration: underline;
+}
+
+h2 {
+  text-align: center;
+  font-family: "Waiting for the Sunrise", cursive;
+  font-size: 48pt;
+  text-decoration: underline;
+}
+
+#fpFooter {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #3a3a3c;
+  text-align: center;
+  height: 50px;
+  z-index: 9999;
+  color: white;
+}
+
+#pictureBody {
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+button {
+  background-color: khaki;
+  font-family: "Reenie Beanie", cursive;
+  font-size: 2em;
+  height: 75px;
+  width: 250px;
+  border: none;
+  box-shadow: 8px 8px 10px;
+}
+
+#backBtn {
+  text-align: center;
+}
+
+.img {
+  display: flex;
+  width: 300px;
+  height: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#imgDescription {
+  font-size: 18pt;
+  text-align: center;
+}
+
+#otherPics {
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+  width: 400px;
+  height: 500px;
+  margin: 20px;
+}
+
+#otherPicsBody {
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#login {
+  margin-right: $buttonMargins;
+  margin-left: $buttonMargins;
+}
+#newPic {
+  margin-left: $buttonMargins;
 }

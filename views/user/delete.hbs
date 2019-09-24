@@ -1,0 +1,19 @@
+<h2 id="delete">Delete</h2>
+<h3>Are you sure you want to delete this picture?<br>
+    <div id="options">
+        <span id="yes">
+            <form action="/gallery/{{results.id}}?_method=DELETE" method="POST">
+                <button type="submit">Yes</button>
+            </form>
+        </span>
+        <span id="no"><button><a href="/gallery/{{results.id}}">No</a></button></span>
+    </div><img src="{{results.url}}" alt="kitten">
+</h3>
+
+<div id="pictureBody">
+    <p id="user">User: <a href="/user/{{results.user.id}}">{{results.user.username}}</a></p>
+    <p id="description">Description: {{results.description}}</p>
+    <p id="url">URL: {{results.url}}</p>
+    <p id="created">Uploaded: {{results.created_at}}</p>
+</div>
+<div id="backBtn"><button><a href="/gallery">Back</a></button></div>
